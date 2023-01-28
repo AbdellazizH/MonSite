@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Résultat{% endblock %}
+
+{% block body %}
+    <h1>{{ question.question_text }}</h1>
+    <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }} -- {{ choice.votes }} vote(s)</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'sondage:detail' question.id %}">Voter encore</a>
+{% endblock %}

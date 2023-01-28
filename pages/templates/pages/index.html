@@ -1,0 +1,13 @@
+{% extends 'pages_base.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <div class="card text-center">
+        <div class="card-body">
+            <h1>Bienvenue sur le sondage avec Django</h1>
+            <p>Une Démo pour une app sondage avec Django</p>
+            <a href="{% url 'sondage:index' %}" class="btn btn-dark">Voir les sondages disponibles</a>
+        </div>
+    </div>
+{% endblock %}
